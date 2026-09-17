@@ -37,62 +37,100 @@ a {
             color: #000000; /* black */
         }
 
-        /* Header Section */
-        .welcome-header {
-            background: linear-gradient(
-                rgba(0,0,0,0.5),
-                rgba(0,0,0,0.5)
-            ),
-            url('images/your-header-image.jpg') center/cover no-repeat;
-            height: 70vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            text-align: center;
-            color: #ffffff;
-            padding: 20px;
-        }
-/* Professional dark blue welcome section */
+      l
+        /* --- GLOBAL COLORS --- */
+:root {
+    --black: #000000;
+    --darkblue: #001a33;
+    --white: #ffffff;
+}
+
+/* --- WELCOME HEADER --- */
 .welcome-header {
-    background-color: #001a33; /* deep navy blue */
-    color: white;
+    background-color: var(--black);
+    color: var(--white);
     text-align: center;
-    padding: 60px 20px;
-    border-bottom: 4px solid #FFD700; /* gold accent */
+    padding: 70px 20px;
+    border-bottom: 4px solid var(--darkblue);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .welcome-header h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: var(--white);
 }
 
 .welcome-header p {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     max-width: 700px;
     margin: auto;
-    line-height: 1.5;
+    line-height: 1.6;
     font-weight: 300;
+    color: var(--white);
 }
 
-/* Fix your VIEW OUR WORK button */
+/* --- VIEW OUR WORK BUTTON --- */
 .view-work {
     display: inline-block;
-    margin-top: 20px;
-    background-color: #FFD700; /* gold */
-    color: #000;
-    padding: 12px 20px;
+    margin-top: 25px;
+    background-color: var(--black);
+    color: var(--darkblue);
+    padding: 14px 24px;
     border-radius: 6px;
     font-weight: bold;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    border: 2px solid var(--darkblue);
+    transition: 0.3s;
 }
 
 .view-work:hover {
-    background-color: #e6c200;
+    background-color: var(--darkblue);
+    color: var(--white);
+}
+
+/* --- LINKS --- */
+a {
+    text-decoration: none;
+    color: var(--darkblue);
+}
+
+/* Only underline phone number */
+.phone-link {
+    text-decoration: underline;
+    color: var(--darkblue);
+}
+
+/* --- SERVICES SECTION --- */
+.services {
+    background-color: var(--white);
+    padding: 40px 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.services h2 {
+    font-size: 2.2rem;
+    color: var(--darkblue);
+    margin-bottom: 20px;
+}
+
+.services ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2rem;
+    color: var(--black);
+}
+
+.services ul li {
+    margin: 8px 0;
+    font-weight: 500;
+}
+
+        
+  
 }
 
     </style>
@@ -106,8 +144,10 @@ a {
         <p>Quality repairs, remodeling, and craftsmanship you can trust — serving Sarasota and surrounding areas.</p>
 
         <!-- Button now links to Facebook -->
-        <a <a class="view-work" href="https://www.facebook.com/DOITALLDAVE" target="_blank">
+        <a <a class="view-work" href="https://www.facebook.com/doitalldave" target="_blank">
     VIEW OUR WORK
+</a>
+
 </a>
 
         </a>
