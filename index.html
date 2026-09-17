@@ -3,170 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome | D.A.D Do It All Remodeling</title>
-    <style>
-a {
-    text-decoration: none;
-    color: #003366;
-}
-
-.phone-link {
-    text-decoration: underline;
-    color: #003366;
-}
-</style>
-
+    <title>D.A.D Do It All Remodeling</title>
 
     <style>
-        /* Remove underline from all links */
-a {
-    text-decoration: none;
-    color: #003366; /* dark blue */
-}
-
-/* Make underline ONLY for the phone number */
-.phone-link {
-    text-decoration: underline;
-    color: #003366; /* dark blue */
-}
+        :root {
+            --black: #000000;
+            --darkblue: #001a33;
+            --white: #ffffff;
+        }
 
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #ffffff; /* white */
-            color: #000000; /* black */
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--white);
         }
 
-K
-/* --- CLEAN BLACK + BLUE WELCOME SECTION --- */
-.welcome-header {
-    background-color: #000000; /* black */
-    color: #ffffff; /* white text */
-    text-align: center;
-    padding: 80px 25px;
-    border-bottom: 5px solid #001a33; /* dark blue accent */
-    font-family: Arial, Helvetica, sans-serif;
-}
+        /* --- WELCOME SECTION --- */
+        .welcome-header {
+            background-color: var(--black);
+            color: var(--white);
+            text-align: center;
+            padding: 80px 25px;
+            border-bottom: 5px solid var(--darkblue);
+        }
 
-.welcome-header h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-    color: #ffffff;
-    letter-spacing: 1px;
-}
+        .welcome-header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
 
-.welcome-header p {
-    font-size: 1.4rem;
-    max-width: 750px;
-    margin: auto;
-    line-height: 1.6;
-    font-weight: 300;
-    color: #ffffff;
-}
+        .welcome-header p {
+            font-size: 1.4rem;
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.6;
+            font-weight: 300;
+        }
 
-/* --- VIEW OUR WORK BUTTON (BLACK + BLUE) --- */
-.view-work {
-    display: inline-block;
-    margin-top: 30px;
-    background-color: #000000; /* black */
-    color: #001a33; /* dark blue text */
-    padding: 14px 26px;
-    border-radius: 6px;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 1.2rem;
-    border: 2px solid #001a33; /* dark blue border */
-    transition: 0.3s;
-}
+        /* --- VIEW OUR WORK BUTTON --- */
+        .view-work {
+            display: inline-block;
+            margin-top: 30px;
+            background-color: var(--black);
+            color: var(--darkblue);
+            padding: 14px 26px;
+            border-radius: 6px;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border: 2px solid var(--darkblue);
+            transition: 0.3s;
+        }
 
-.view-work:hover {
-    background-color: #001a33; /* dark blue */
-    color: #ffffff; /* white */
-}
+        .view-work:hover {
+            background-color: var(--darkblue);
+            color: var(--white);
+        }
 
-/* --- LINKS --- */
-a {
-    text-decoration: none;
-    color: #001a33; /* dark blue */
-}
+        /* --- SERVICES SECTION --- */
+        .services {
+            padding: 50px 20px;
+            text-align: center;
+        }
 
-/* Only underline phone number */
-.phone-link {
-    text-decoration: underline;
-    color: #001a33;
-}
-        
-        
+        .services h2 {
+            font-size: 2.4rem;
+            color: var(--darkblue);
+            margin-bottom: 25px;
+        }
+
+        .services ul {
+            list-style: none;
+            padding: 0;
+            font-size: 1.3rem;
+            color: var(--black);
+            line-height: 1.8;
+        }
+
+        /* --- LINKS --- */
+        a {
+            text-decoration: none;
+            color: var(--darkblue);
+        }
+
+        .phone-link {
+            text-decoration: underline;
+            color: var(--darkblue);
+            font-weight: bold;
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- Welcome Header -->
+    <!-- WELCOME SECTION -->
     <div class="welcome-header">
         <h1>Welcome to D.A.D Do It All Remodeling</h1>
         <p>Quality repairs, remodeling, and craftsmanship you can trust — serving Sarasota and surrounding areas.</p>
 
-        <!-- Button now links to Facebook -->
-        <a <a class="view-work" href="https://www.facebook.com/DOITALLDAVE" target="_blank">
-    VIEW OUR WORK
-</a>
-
-</a>
-
-</a>
-
+        <a class="view-work" href="https://www.facebook.com/DOITALLDAVELLC" target="_blank">
+            VIEW OUR WORK
         </a>
     </div>
 
-    <!-- About Section -->
-    <div class="about-section">
-        <h2>Why Choose Us?</h2>
-        <p>
-            With over 10 years of experience, D.A.D Do It All Remodeling provides reliable, affordable, 
-            and high‑quality home improvement services. From kitchens and bathrooms to flooring and repairs — 
-            we do it all.
-        </p>
-    </div>
+    <!-- SERVICES SECTION -->
+    <section class="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>home remodeling</li>
+            <li>door installation</li>
+            <li>Car repairs</li>
+            <li>flooring</li>
+            <li>painting</li>
+            <li>Drywall</li>
+            <li>bathroom</li>
+            <li>General repairs</li>
+            <li><a class="phone-link" href="tel:9415451327">941‑545‑1327</a></li>
+        </ul>
+    </section>
 
 </body>
 </html>
-
-        <h1>D.A.D remodeling and repairs</h1>
-        <p> Do it. All . Dave</p>
-        <p>Quality repairs and remodling you can count on.</p>
-        <a href="#contact"
-          class= quote-btn"Get a free quote </a> 
-  
-
-
-
-  <section>
-    <h2> Our Services</h2>
-    <ul> 
-     <li>home remodeling</li>
-      <li>door installation</li>
-    <li>Car repairs</li>
-    <li>flooring</li>
-      <li>painting</li>
-        <li>Drywall</li>
-          <li>bathroom </li>
-                  <li>General repairs</li>
-    </ul>
-  </section>
-
-  <section> 
-    <h1>Contact us/ our work</h1>
-    <ul> 
-     <li><a class="phone-link" href="tel:9415451327">941‑545‑1327</a>
-</li>
-     <li>DOIT.ALLDAVE2021@GMAIL.COM</li>
-     <li>getn a  free quote</li>
-      <li> see some of our work by contacting or facebook @DOIT ALL DAVE
-    </ul>
-
-</body>
-</html>
-  </section>
-  
