@@ -123,6 +123,181 @@
             <li><a class="phone-link" href="tel:9415451327">941‑545‑1327</a></li>
         </ul>
     </section>
+    <!-- HEADER / NAVIGATION -->
+<header class="site-header">
+  <div class="nav-container">
+
+    <!-- Logo / Business Name -->
+    <a href="#home" class="logo">
+      DAD REMODELING
+    </a>
+
+    <!-- Mobile Menu Button -->
+    <button class="menu-toggle" onclick="toggleMenu()">
+      ☰
+    </button>
+
+    <!-- Navigation -->
+    <nav id="main-nav">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Our Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+
+      <a href="#estimate" class="estimate-btn">
+        Get a Free Estimate
+      </a>
+    </nav>
+
+  </div>
+</header>
+
+<style>
+/* =========================
+   HEADER
+========================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: #05070b;
+  border-bottom: 2px solid #142d52;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.45);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 18px 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+
+.logo {
+  color: white;
+  text-decoration: none;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.logo:hover {
+  color: #3b82c4;
+}
+
+/* NAVIGATION */
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+nav a:hover {
+  color: #3b82c4;
+}
+
+/* ESTIMATE BUTTON */
+
+.estimate-btn {
+  background: #12345a;
+  color: white !important;
+
+  padding: 12px 20px;
+  border-radius: 6px;
+
+  border: 1px solid #2d5d91;
+  transition: 0.25s ease;
+}
+
+.estimate-btn:hover {
+  background: white;
+  color: #07111f !important;
+  border-color: white;
+}
+
+/* MOBILE BUTTON */
+
+.menu-toggle {
+  display: none;
+
+  background: transparent;
+  color: white;
+  border: none;
+
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .nav-container {
+    padding: 15px 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    background: #05070b;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 0;
+
+    border-bottom: 2px solid #142d52;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    padding: 16px 25px;
+    border-top: 1px solid #142d52;
+  }
+
+  .estimate-btn {
+    margin: 12px 20px 18px;
+    text-align: center;
+  }
+}
+</style>
+
+<script>
+function toggleMenu() {
+  document.getElementById("main-nav").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
