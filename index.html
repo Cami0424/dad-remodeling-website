@@ -1,765 +1,746 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>D.A.D Do It All Remodeling</title>
 
     <style>
-        <section class="hero">
-  <div class="hero-bg"></div>
 
-  <div class="hero-content">
-    <h1>Welcome to D.A.D Do It All<br>Remodeling</h1>
-
-    <p>
-      Quality repairs, remodeling, and craftsmanship you can trust —
-      serving Sarasota and surrounding areas.
-    </p>
-
-    <a href="#services" class="button">VIEW OUR WORK</a>
-  </div>
-</section>
-        .hero {
-  position: relative;
-  min-height: 650px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-  background: #000;
-}
-
-.hero-bg {
-  position: absolute;
-  inset: 0;
-
-  background-image:
-    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
-    url("IMG_6689.jpeg");
-
-  background-size: cover;
-  background-position: center;
-  opacity: 0.75;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  color: white;
-  max-width: 1000px;
-  padding: 30px;
-}
-
-.hero h1 {
-  font-size: 55px;
-  font-weight: 800;
-  margin-bottom: 25px;
-}
-
-.hero p {
-  font-size: 20px;
-  line-height: 1.6;
-  margin-bottom: 35px;
-}
-
-.button {
-  display: inline-block;
-  padding: 14px 30px;
-  color: white;
-  border: 2px solid #1769ff;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-}
-
-.button:hover {
-  background: #1769ff;
-}
-
-/* Makes it fit phones too */
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 34px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-}
         :root {
             --black: #000000;
             --darkblue: #001a33;
+            --blue: #1769ff;
             --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
             background-color: var(--white);
+            color: var(--black);
         }
 
-        /* --- WELCOME SECTION --- */
+
+        /* =========================
+           WELCOME / HERO SECTION
+        ========================= */
+
         .welcome-header {
-            background-color: var(--black);
-            color: var(--white);
+
+            position: relative;
+
+            min-height: 650px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
             text-align: center;
+
             padding: 80px 25px;
+
+            overflow: hidden;
+
+            color: var(--white);
+
             border-bottom: 5px solid var(--darkblue);
+
+            /* D.A.D PICTURE BEHIND THE WHITE WORDS */
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.45),
+                    rgba(0, 0, 0, 0.60)
+                ),
+                url("IMG_6689.jpeg");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
+
 
         .welcome-header h1 {
+
             font-size: 3rem;
+
             font-weight: 800;
-            margin-bottom: 20px;
+
+            margin: 0 auto 20px;
+
             letter-spacing: 1px;
+
+            max-width: 1000px;
+
+            line-height: 1.15;
+
+            color: white;
+
+            text-shadow:
+                0 2px 8px rgba(0, 0, 0, 0.8);
         }
+
 
         .welcome-header p {
+
             font-size: 1.4rem;
-            max-width: 750px;
-            margin: auto;
+
+            max-width: 850px;
+
+            margin: 0 auto;
+
             line-height: 1.6;
-            font-weight: 300;
+
+            font-weight: 400;
+
+            color: white;
+
+            text-shadow:
+                0 2px 6px rgba(0, 0, 0, 0.8);
         }
 
-        /* --- VIEW OUR WORK BUTTON --- */
+
+        /* =========================
+           VIEW OUR WORK BUTTON
+        ========================= */
+
         .view-work {
+
             display: inline-block;
+
             margin-top: 30px;
-            background-color: var(--black);
-            color: var(--darkblue);
-            padding: 14px 26px;
+
+            background-color: rgba(0, 0, 0, 0.45);
+
+            color: white;
+
+            padding: 14px 30px;
+
             border-radius: 6px;
+
             font-weight: bold;
+
             text-decoration: none;
-            font-size: 1.2rem;
-            border: 2px solid var(--darkblue);
-            transition: 0.3s;
+
+            font-size: 1.1rem;
+
+            border: 2px solid var(--blue);
+
+            transition: 0.3s ease;
         }
+
 
         .view-work:hover {
-            background-color: var(--darkblue);
-            color: var(--white);
+
+            background-color: var(--blue);
+
+            color: white;
+
+            transform: translateY(-2px);
         }
 
-        /* --- SERVICES SECTION --- */
+
+        /* =========================
+           SERVICES SECTION
+        ========================= */
+
         .services {
-            padding: 50px 20px;
+
+            padding: 70px 20px;
+
             text-align: center;
+
+            background: white;
         }
+
 
         .services h2 {
+
             font-size: 2.4rem;
+
             color: var(--darkblue);
+
             margin-bottom: 25px;
         }
 
+
         .services ul {
+
             list-style: none;
+
             padding: 0;
+
+            margin: 0;
+
             font-size: 1.3rem;
+
             color: var(--black);
+
             line-height: 1.8;
         }
 
-        /* --- LINKS --- */
+
+        .services li {
+
+            margin-bottom: 5px;
+        }
+
+
+        /* =========================
+           LINKS
+        ========================= */
+
         a {
+
             text-decoration: none;
+
             color: var(--darkblue);
         }
 
+
         .phone-link {
+
             text-decoration: underline;
+
             color: var(--darkblue);
+
             font-weight: bold;
         }
+
+
+        /* =========================
+           OUR WORK / PROJECTS
+        ========================= */
+
+        .projects-section {
+
+            background: #080b10;
+
+            color: white;
+
+            padding: 80px 20px;
+        }
+
+
+        .projects-container {
+
+            max-width: 1200px;
+
+            margin: auto;
+        }
+
+
+           PROJECT CTA
+        ========================= */
+
+        .projects-cta {
+
+            margin-top: 60px;
+
+            padding: 45px 25px;
+
+            text-align: center;
+
+            background: #0d1f35;
+
+            border: 1px solid #214a75;
+
+            border-radius: 10px;
+        }
+
+
+        .projects-cta h2 {
+
+            margin: 0 0 10px;
+
+            font-size: 2rem;
+        }
+
+
+        .projects-cta p {
+
+            color: #c5ced8;
+
+            margin-bottom: 25px;
+        }
+
+
+        .projects-button {
+
+            display: inline-block;
+
+            background: white;
+
+            color: #07111f;
+
+            text-decoration: none;
+
+            padding: 14px 25px;
+
+            border-radius: 6px;
+
+            font-weight: 800;
+
+            transition: 0.25s ease;
+        }
+
+
+        .projects-button:hover {
+
+            background: #3b82c4;
+
+            color: white;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .site-footer {
+
+            background: #05070b;
+
+            color: white;
+
+            border-top: 3px solid #142d52;
+
+            margin-top: 60px;
+        }
+
+
+        .footer-container {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 55px 25px;
+
+            display: grid;
+
+            grid-template-columns: 2fr 1fr 1fr;
+
+            gap: 50px;
+        }
+
+
+        .footer-column h2 {
+
+            margin: 0 0 15px;
+
+            font-size: 1.5rem;
+
+            letter-spacing: 2px;
+        }
+
+
+        .footer-column h3 {
+
+            margin-bottom: 18px;
+
+            color: #3b82c4;
+
+            font-size: 1.1rem;
+        }
+
+
+        .footer-column p {
+
+            color: #bfc7d1;
+
+            line-height: 1.7;
+
+            max-width: 350px;
+        }
+
+
+        .footer-column a {
+
+            display: block;
+
+            color: #dfe5ec;
+
+            text-decoration: none;
+
+            margin-bottom: 12px;
+
+            transition: 0.25s ease;
+        }
+
+
+        .footer-column a:hover {
+
+            color: #3b82c4;
+        }
+
+
+        .footer-phone {
+
+            font-size: 1.1rem;
+
+            font-weight: bold;
+
+            margin-top: 20px;
+        }
+
+
+        .facebook-link {
+
+            font-weight: 600;
+        }
+
+
+        .footer-estimate {
+
+            display: inline-block !important;
+
+            background: #12345a;
+
+            color: white !important;
+
+            padding: 13px 20px;
+
+            border-radius: 6px;
+
+            border: 1px solid #2d5d91;
+
+            margin-top: 12px;
+
+            text-align: center;
+
+            max-width: 190px;
+        }
+
+
+        .footer-estimate:hover {
+
+            background: white;
+
+            color: #07111f !important;
+
+            border-color: white;
+        }
+
+
+        /* =========================
+           FOOTER BOTTOM
+        ========================= */
+
+        .footer-bottom {
+
+            border-top: 1px solid #142d52;
+
+            padding: 20px 25px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            color: #8f9baa;
+
+            font-size: 0.85rem;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .welcome-header {
+
+                min-height: 600px;
+
+                padding: 70px 20px;
+            }
+
+
+            .welcome-header h1 {
+
+                font-size: 2.1rem;
+            }
+
+
+            .welcome-header p {
+
+                font-size: 1rem;
+            }
+
+
+            .projects-section {
+
+                padding: 60px 18px;
+            }
+
+
+            .projects-heading h2 {
+
+                font-size: 2rem;
+            }
+
+
+            .projects-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .project-card img {
+
+                height: 240px;
+            }
+
+
+            .footer-container {
+
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+
+                padding: 45px 25px;
+            }
+
+
+            .footer-bottom {
+
+                flex-direction: column;
+
+                text-align: center;
+
+                gap: 8px;
+
+                padding: 20px;
+            }
+        }
+
     </style>
 </head>
 
+
 <body>
 
-    <!-- WELCOME SECTION -->
-    <div class="welcome-header">
-        <h1>Welcome to D.A.D Do It All Remodeling</h1>
-        <p>Quality repairs, remodeling, and craftsmanship you can trust — serving Sarasota and surrounding areas.</p>
 
-        <a class="view-work" href="https://www.facebook.com/DOITALLDAVELLC" target="_blank">
+    <!-- =========================
+         WELCOME SECTION
+    ========================= -->
+
+    <div class="welcome-header" id="home">
+
+        <h1>
+            Welcome to D.A.D Do It All Remodeling
+        </h1>
+
+        <p>
+            Quality repairs, remodeling, and craftsmanship you can trust —
+            serving Sarasota and surrounding areas.
+        </p>
+
+        <a
+            class="view-work"
+            href="https://www.facebook.com/DOITALLDAVELLC"
+            target="_blank">
+
             VIEW OUR WORK
+
         </a>
+
     </div>
 
-    <!-- SERVICES SECTION -->
-    <section class="services">
+
+    <!-- =========================
+         SERVICES
+    ========================= -->
+
+    <section class="services" id="services">
+
         <h2>Our Services</h2>
+
         <ul>
+
             <li>Home remodeling</li>
+
             <li>Door installation</li>
+
             <li>Car repairs</li>
+
             <li>Flooring</li>
+
             <li>Painting</li>
+
             <li>Drywall</li>
+
             <li>General repairs</li>
-            <li><a class="phone-link" href="tel:9415451327">941‑545‑1327</a></li>
+
+            <li>
+                <a
+                    class="phone-link"
+                    href="tel:9415451327">
+
+                    941-545-1327
+
+                </a>
+            </li>
+
         </ul>
+
     </section>
-    ```html
-<!-- =========================
-     OUR WORK / PROJECTS
-========================= -->
+            <!-- CTA -->
 
-<section id="projects" class="projects-section">
+            <div class="projects-cta">
 
-  <div class="projects-container">
+                <h2>
+                    Ready To Start Your Project?
+                </h2>
 
-    <div class="projects-heading">
-      <p class="section-label">OUR WORK</p>
+                <p>
+                    Contact us today for a free estimate.
+                </p>
 
-      <h2>Projects We're Proud Of</h2>
+                <a
+                    href="tel:9415451327"
+                    class="projects-button">
 
-      <p>
-        Take a look at some of our remodeling and home improvement work.
-      </p>
-    </div>
+                    📞 Call 941-545-1327
+
+                </a>
+
+            </div>
 
 
-    <div class="projects-grid">
-
-      <!-- PROJECT 1 -->
-      <div class="project-card">
-
-        <img
-          src="images/project1.jpg"
-          alt="Remodeling project">
-
-        <div class="project-info">
-          <h3>Home Remodeling</h3>
-          <p>Quality work with attention to detail.</p>
         </div>
 
-      </div>
+    </section>
 
 
-      <!-- PROJECT 2 -->
-      <div class="project-card">
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
-        <img
-          src="images/project2.jpg"
-          alt="Home improvement project">
+    <footer class="site-footer" id="contact">
 
-        <div class="project-info">
-          <h3>Home Improvement</h3>
-          <p>Built to look great and last.</p>
+
+        <div class="footer-container">
+
+
+            <!-- BUSINESS -->
+
+            <div class="footer-column">
+
+                <h2>
+                    DAD REMODELING
+                </h2>
+
+                <p>
+                    Quality remodeling and home improvement
+                    services you can count on.
+                </p>
+
+                <a
+                    href="tel:9415451327"
+                    class="footer-phone">
+
+                    📞 941-545-1327
+
+                </a>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#services">
+                    Services
+                </a>
+
+                <a href="#projects">
+                    Our Work
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- CONNECT -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Connect With Us
+                </h3>
+
+                <a
+                    href="https://www.facebook.com/DOITALLDAVELLC/"
+                    target="_blank"
+                    class="facebook-link">
+
+                    Facebook
+
+                </a>
+
+                <a
+                    href="tel:9415451327"
+                    class="footer-estimate">
+
+                    Get a Free Estimate
+
+                </a>
+
+            </div>
+
+
         </div>
 
-      </div>
 
+        <!-- BOTTOM BAR -->
 
-      <!-- PROJECT 3 -->
-      <div class="project-card">
+        <div class="footer-bottom">
 
-        <img
-          src="images/project3.jpg"
-          alt="Renovation project">
+            <p>
+                © 2026 DAD REMODELING. All Rights Reserved.
+            </p>
 
-        <div class="project-info">
-          <h3>Renovations</h3>
-          <p>Turning ideas into finished spaces.</p>
+            <p>
+                Quality Work. Honest Service.
+            </p>
+
         </div>
 
-      </div>
 
-
-      <!-- PROJECT 4 -->
-      <div class="project-card">
-
-        <img
-          src="images/project4.jpg"
-          alt="Remodeling work">
-
-        <div class="project-info">
-          <h3>Custom Projects</h3>
-          <p>Professional service from start to finish.</p>
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- CALL TO ACTION -->
-
-    <div class="projects-cta">
-
-      <h2>Ready To Start Your Project?</h2>
-
-      <p>
-        Contact us today for a free estimate.
-      </p>
-
-      <a href="tel:9415451327" class="projects-button">
-        📞 Call 941-545-1327
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<style>
-
-/* =========================
-   PROJECTS SECTION
-========================= */
-
-.projects-section {
-  background: #080b10;
-  color: white;
-  padding: 80px 20px;
-}
-
-.projects-container {
-  max-width: 1200px;
-  margin: auto;
-}
-
-
-/* HEADING */
-
-.projects-heading {
-  text-align: center;
-  margin-bottom: 45px;
-}
-
-.section-label {
-  color: #3b82c4;
-  font-size: 0.85rem;
-  font-weight: 800;
-  letter-spacing: 3px;
-  margin-bottom: 10px;
-}
-
-.projects-heading h2 {
-  font-size: 2.5rem;
-  margin: 0 0 15px;
-}
-
-.projects-heading p {
-  color: #bfc7d1;
-  line-height: 1.6;
-}
-
-
-/* PROJECT GRID */
-
-.projects-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(2, 1fr);
-
-  gap: 25px;
-}
-
-
-/* PROJECT CARD */
-
-.project-card {
-  background: #05070b;
-
-  border: 1px solid #142d52;
-
-  border-radius: 10px;
-
-  overflow: hidden;
-
-  transition: 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-
-  border-color: #3b82c4;
-
-  box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-
-/* PROJECT IMAGE */
-
-.project-card img {
-  width: 100%;
-
-  height: 280px;
-
-  object-fit: cover;
-
-  display: block;
-
-  background: #111820;
-}
-
-
-/* PROJECT INFO */
-
-.project-info {
-  padding: 22px;
-}
-
-.project-info h3 {
-  margin: 0 0 8px;
-
-  font-size: 1.25rem;
-}
-
-.project-info p {
-  color: #aeb8c4;
-
-  margin: 0;
-
-  line-height: 1.5;
-}
-
-
-/* =========================
-   CTA
-========================= */
-
-.projects-cta {
-  margin-top: 60px;
-
-  padding: 45px 25px;
-
-  text-align: center;
-
-  background: #0d1f35;
-
-  border: 1px solid #214a75;
-
-  border-radius: 10px;
-}
-
-.projects-cta h2 {
-  margin: 0 0 10px;
-
-  font-size: 2rem;
-}
-
-.projects-cta p {
-  color: #c5ced8;
-
-  margin-bottom: 25px;
-}
-
-
-/* BUTTON */
-
-.projects-button {
-  display: inline-block;
-
-  background: white;
-
-  color: #07111f;
-
-  text-decoration: none;
-
-  padding: 14px 25px;
-
-  border-radius: 6px;
-
-  font-weight: 800;
-
-  transition: 0.25s ease;
-}
-
-.projects-button:hover {
-  background: #3b82c4;
-
-  color: white;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 700px) {
-
-  .projects-section {
-    padding: 60px 18px;
-  }
-
-  .projects-heading h2 {
-    font-size: 2rem;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-card img {
-    height: 240px;
-  }
-
-}
-
-</style>
-```
-
- 
-<!-- =========================
-     DAD REMODELING FOOTER
-========================= -->
-
-<footer class="site-footer">
-
-  <div class="footer-container">
-
-    <!-- Business -->
-    <div class="footer-column">
-      <h2>DAD REMODELING</h2>
-      <p>
-        Quality remodeling and home improvement services
-        you can count on.
-      </p>
-
-      <a href="tel:9415451327" class="footer-phone">
-        📞 941-545-1327
-      </a>
-    </div>
-
-
-    <!-- Quick Links -->
-    <div class="footer-column">
-      <h3>Quick Links</h3>
-
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#projects">Our Work</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </div>
-
-
-    <!-- Connect -->
-    <div class="footer-column">
-      <h3>Connect With Us</h3>
-
-      <a
-        href="https://www.facebook.com/DOITALLDAVELLC/"
-        target="_blank"
-        class="facebook-link">
-        Facebook
-      </a>
-
-      <a href="tel:9415451327" class="footer-estimate">
-        Get a Free Estimate
-      </a>
-    </div>
-
-  </div>
-
-
-  <!-- Bottom Bar -->
-  <div class="footer-bottom">
-
-    <p>
-      © 2026 DAD REMODELING. All Rights Reserved.
-    </p>
-
-    <p>
-      Quality Work. Honest Service.
-    </p>
-
-  </div>
-
-</footer>
-
-
-<style>
-
-/* =========================
-   FOOTER
-========================= */
-
-.site-footer {
-  background: #05070b;
-  color: white;
-  border-top: 3px solid #142d52;
-  margin-top: 60px;
-}
-
-
-/* MAIN FOOTER */
-
-.footer-container {
-  max-width: 1200px;
-  margin: auto;
-
-  padding: 55px 25px;
-
-  display: grid;
-  grid-template-columns:
-    2fr 1fr 1fr;
-
-  gap: 50px;
-}
-
-
-/* BUSINESS */
-
-.footer-column h2 {
-  margin: 0 0 15px;
-
-  font-size: 1.5rem;
-  letter-spacing: 2px;
-}
-
-.footer-column h3 {
-  margin-bottom: 18px;
-
-  color: #3b82c4;
-
-  font-size: 1.1rem;
-}
-
-.footer-column p {
-  color: #bfc7d1;
-
-  line-height: 1.7;
-
-  max-width: 350px;
-}
-
-
-/* LINKS */
-
-.footer-column a {
-  display: block;
-
-  color: #dfe5ec;
-
-  text-decoration: none;
-
-  margin-bottom: 12px;
-
-  transition: 0.25s ease;
-}
-
-.footer-column a:hover {
-  color: #3b82c4;
-}
-
-
-/* PHONE */
-
-.footer-phone {
-  font-size: 1.1rem;
-
-  font-weight: bold;
-
-  margin-top: 20px;
-}
-
-
-/* FACEBOOK */
-
-.facebook-link {
-  font-weight: 600;
-}
-
-
-/* ESTIMATE BUTTON */
-
-.footer-estimate {
-  display: inline-block !important;
-
-  background: #12345a;
-
-  color: white !important;
-
-  padding: 13px 20px;
-
-  border-radius: 6px;
-
-  border: 1px solid #2d5d91;
-
-  margin-top: 12px;
-
-  text-align: center;
-
-  max-width: 190px;
-}
-
-.footer-estimate:hover {
-  background: white;
-
-  color: #07111f !important;
-
-  border-color: white;
-}
-
-
-/* =========================
-   BOTTOM BAR
-========================= */
-
-.footer-bottom {
-  border-top: 1px solid #142d52;
-
-  padding: 20px 25px;
-
-  display: flex;
-
-  justify-content: space-between;
-
-  align-items: center;
-
-  max-width: 1200px;
-
-  margin: auto;
-
-  color: #8f9baa;
-
-  font-size: 0.85rem;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 768px) {
-
-  .footer-container {
-    grid-template-columns: 1fr;
-
-    gap: 35px;
-
-    padding: 45px 25px;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-
-    text-align: center;
-
-    gap: 8px;
-
-    padding: 20px;
-  }
-
-}
-
-</style>
-```
+    </footer>
 
 
 </body>
+
 </html>
-
-
