@@ -6,6 +6,88 @@
     <title>D.A.D Do It All Remodeling</title>
 
     <style>
+        <section class="hero">
+  <div class="hero-bg"></div>
+
+  <div class="hero-content">
+    <h1>Welcome to D.A.D Do It All<br>Remodeling</h1>
+
+    <p>
+      Quality repairs, remodeling, and craftsmanship you can trust —
+      serving Sarasota and surrounding areas.
+    </p>
+
+    <a href="#services" class="button">VIEW OUR WORK</a>
+  </div>
+</section>
+        .hero {
+  position: relative;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background: #000;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
+    url("IMG_6689.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  opacity: 0.75;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  max-width: 1000px;
+  padding: 30px;
+}
+
+.hero h1 {
+  font-size: 55px;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+.hero p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 30px;
+  color: white;
+  border: 2px solid #1769ff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.button:hover {
+  background: #1769ff;
+}
+
+/* Makes it fit phones too */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
         :root {
             --black: #000000;
             --darkblue: #001a33;
